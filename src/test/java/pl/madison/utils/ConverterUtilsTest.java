@@ -21,17 +21,29 @@ public class ConverterUtilsTest {
     }
 
     @Test
-    public void toDecimalSystem32() throws Exception {
+    public void toDecimalSystem32fromBinar() throws Exception {
         List<Integer> number = Arrays.asList(1, 0, 0, 0, 0, 0);
 
         assertEquals(32, converterUtils.fromBinarySystemToDecimal(number));
     }
 
     @Test
-    public void toDecimalSystem17() throws Exception {
+    public void toDecimalSystem17fromBinar() throws Exception {
         List<Integer> number = Arrays.asList(1, 0, 0, 0, 1);
 
         assertEquals(17, converterUtils.fromBinarySystemToDecimal(number));
     }
+
+    @Test
+    public void toDecimalToOctal67() throws Exception {
+        assertEquals("103", converterUtils.fromDecimalToOctal(67));
+    }
+
+    public void toOctalToDecimal45() throws Exception {
+        List<Integer> number = Arrays.asList(5, 5);
+        assertEquals(45, converterUtils.fromOctalToDecimal(number));
+    }
+
+
 
 }
