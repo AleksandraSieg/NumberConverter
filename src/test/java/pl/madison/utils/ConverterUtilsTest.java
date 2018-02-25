@@ -1,0 +1,37 @@
+package pl.madison.utils;
+
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class ConverterUtilsTest {
+    private ConverterUtils converterUtils = new ConverterUtils();
+
+    @Test
+    public void toBinarySystem17() throws Exception {
+        assertEquals("10001", converterUtils.fromDecimalToBinarySystem(17));
+    }
+
+    @Test
+    public void toBinarySystem32() throws Exception {
+        assertEquals("100000", converterUtils.fromDecimalToBinarySystem(32));
+    }
+
+    @Test
+    public void toDecimalSystem32() throws Exception {
+        List<Integer> number = Arrays.asList(1, 0, 0, 0, 0, 0);
+
+        assertEquals(32, converterUtils.fromBinarySystemToDecimal(number));
+    }
+
+    @Test
+    public void toDecimalSystem17() throws Exception {
+        List<Integer> number = Arrays.asList(1, 0, 0, 0, 1);
+
+        assertEquals(17, converterUtils.fromBinarySystemToDecimal(number));
+    }
+
+}
