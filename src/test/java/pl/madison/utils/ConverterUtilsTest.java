@@ -39,10 +39,19 @@ public class ConverterUtilsTest {
         assertEquals("103", converterUtils.fromDecimalToOctal(67));
     }
 
+    @Test
     public void toOctalToDecimal45() throws Exception {
         List<Integer> number = Arrays.asList(5, 5);
         assertEquals(45, converterUtils.fromOctalToDecimal(number));
     }
+
+    @Test
+    public void toHexadecimal3456() throws Exception {
+        List<String> number = Arrays.asList("D", "8", "0");
+        assertEquals(number, converterUtils.fromDecimalToHexadecimal(3456));
+    }
+
+
 
 
 
